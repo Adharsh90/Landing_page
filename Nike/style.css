@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+}
+
+.box{
+  height: 100vh;
+  width: 100vw;
+  background: url("background.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  overflow: hidden;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+}
+
+
+.logo{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.logo svg{
+  fill: #fff;
+  width: 80px;
+}
+
+.navbar{
+  position: absolute;
+  top: 30px;
+  width: 80%;
+  height: 50px;
+  left: 20%;
+}
+
+.navbar ul{
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul a{
+  color: #fff;
+  margin: 0px 30px;
+  transition: 0.2s ease;
+}
+
+.navbar ul a:hover{
+  border-bottom: 3px solid #fff;
+}
+
+.search{
+  margin-left: 150px;
+  font-size: 25px;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.search:hover{
+  transform: rotateZ(25deg);
+}
+
+.text{
+  position: absolute;
+  width: 500px;
+  color: #fff;
+  font-size: 18px;
+  top: 60%;
+  left: 30px;
+  transform: translateY(-70%);
+  line-height: 35px;
+}
+
+.text h1{
+  margin-bottom: 20px;
+}
+
+.text button{
+  padding: 10px 15px;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  color: #a10f10;
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: 0.5s ease;
+}
+
+.text button:hover{
+  color: #fff;
+  background: #a10f10;
+}
+
+.shoes{
+  position: absolute;
+  height: 250px;
+  width: 500px;
+  right: 5%;
+  bottom: 25%;
+  padding-bottom: 20px;
+  overflow: hidden;
+  transform: rotateZ(-30deg);
+}
+
+.shoes img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  filter: drop-shadow(5px 5px 2px rgba(0,0,0,0.8));
+  transform: scale(1.45);
+  animation: animate 5s infinite ease;
+}
+
+@keyframes animate{
+  0%{
+    transform: translateY(0) scale(1.45) rotateZ(0);
+  }
+  50%{
+    transform: translateY(5%) scale(1.45) rotateZ(-1deg);
+  }
+  100%{
+    transform: translateY(0) scale(1.45) rotateZ(0);
+  }
+}
+
+.social-media{
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  transform: translate(-50%,-30%);
+  font-size: 20px;
+}
+
+.social-media a{
+  margin: 0 10px;
+  color: #fff;
+}
+
+.social-media a i{
+  transition: 0.3s ease;
+}
+
+.social-media i:hover{
+  transform: translateY(-30%);
+}
+
+.colors{
+  position: absolute;
+  bottom: 10%;
+  right: 15%;
+}
+
+.colors div{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #fff;
+  display: inline-block;
+  margin: 0 10px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.colors div:hover{
+  transform: translateY(-30%);
+}
+
+.colors .red{
+  background: #a10f10;
+}
+
+.colors .light-blue{
+  background: #00554d;
+}
+
+.colors .violet{
+  background: #232eb1;
+}
+
+@media only screen and (max-width:1080px){
+  .navbar{
+    font-size: 16px;
+  }
+  .search{
+    margin-left: 50px;
+    margin-top: -5px;
+  }
+  .text{
+    font-size: 17px;
+    width: 400px;
+  }
+  .text h1{
+    font-size: 30px;
+  }
+  .shoes{
+    height: 220px;
+    width: 440px;
+    bottom: 35%;
+    right: 2%;
+  }
+  .social-media{
+    left: 15%;
+  }
+}
+
+
+@media only screen and (max-width:992px){
+  .navbar{
+    font-size: 15px;
+  }
+  .text{
+    font-size: 16px;
+    width: 350px;
+    line-height: 30px;
+  }
+  .text h1{
+    font-size: 26px;
+  }
+  .shoes{
+    height: 200px;
+    width: 400px;
+    bottom: 35%;
+    right: 2%;
+  }
+  .social-media{
+    left: 15%;
+  }
+}
+
+
+@media only screen and (max-width:850px){
+  .box{
+    background-position: bottom;
+    background-size: 200%;
+  }
+  .navbar{
+    font-size: 14px;
+  }
+  .navbar ul a{
+    margin: 0 20px;
+  }
+  .search{
+    margin-left: 30px;
+    margin-top: -5px;
+  }
+  .text{
+    font-size: 15px;
+    width: 300px;
+    line-height: 30px;
+  }
+  .text h1{
+    font-size: 24px;
+  }
+  .shoes{
+    height: 180px;
+    width: 360px;
+    bottom: 35%;
+    right: 2%;
+  }
+  .social-media{
+    left: 20%;
+  }
+}
+
+@media only screen and (max-width:700px){
+  .box{
+    background-position: bottom;
+    background-size: 200%;
+  }
+  .navbar{
+    top: 15%;
+    font-size: 14px;
+    left: 50%; 
+    transform: translateX(-60%); 
+  }
+  .navbar ul a{
+    margin: 0 15px;
+  }
+  .search{
+    margin-left: 10px;
+    margin-top: -5px;
+  }
+  .text{
+    font-size: 15px;
+    width: 400px;
+    padding-right: 40px;
+  }
+  .text h1{
+    font-size: 22px;
+  }
+  .shoes{
+   display: none;
+  }
+  .social-media{
+    left: 25%;
+  }
+}
